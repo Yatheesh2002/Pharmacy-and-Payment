@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./favicon_io/favicon-16x16.png" type="image/x-icon"><!--favicon icons-->
+    <title>Payments Serandib Hospitals</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="payment.js" defer></script>
+</head>
+<body>
+    <header><!--header-->
+        <nav><!--navigation bar-->
+            <div class="nav-container"><!--navigation conatiner-->
+                <a href="./index.html" class="logo">
+                    <div class="logoimg"><img src="./images/LOGO.jpg" alt="logo"></div></a>
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <label for="menu-toggle" class="menu-icon"><!--hamburger menu-->
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </label>
+                <ul class="nav-links"><!--navigation links-->
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./index.html">About</a></li>
+                    <li><a href="./index.html">Doctors</a></li>
+                    <li><a href="./index.html">Services</a></li>
+                    <li><a href="./index.html">Pharmacy</a></li>
+                    <li><a href="./index.html">Reservation</a></li>
+                </ul>
+            </div>
+        </nav><!--navigation bar ends-->
+    </header><!--header ends-->
+    
+    <div class="formimage-container"><!--image conatiner-->
+        <img src="./images/Payment.jpeg" alt="Checkout" class="formimage-image">
+        <div class="formimage-text">Checkout Your Order And Recieve Within 7 Days</div><!--text-->
+    </div>
+    <!-- Order Summary Table -->
+    <table id="orderTable"><!--table to show added medicine-->
+        <thead>
+            <tr>
+                <th>Medicine</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody id="order-table-body">
+            <!-- Items will be dynamically populated here -->
+        </tbody>
+    </table>
+
+    <h2>Total Price: $<span id="total-price">0.00</span></h2>
+
+    <!-- Personal and Delivery Details Form -->
+    <div class="detailsForm">
+        <h5>Enter Your Details</h5>
+
+        <form id="payment-form">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" required>
+            
+            <label for="address">Delivery Address</label>
+            <input type="text" id="address" required>
+
+            <label for="telephone">Telephone Number</label>
+            <input type="text" id="telephone" required>
+
+            
+
+
+            <!-- Payment Method Selection -->
+            <div id="payment-method">Payment Method</div>
+
+            <input type="radio" id="cash-on-delivery" name="payment-method" value="cash" checked>
+            <label for="cash-on-delivery">Cash on Delivery</label>
+            
+            <input type="radio" id="card-payment" name="payment-method" value="card">
+            <label for="card-payment">Card Payment</label>
+
+            <!-- Card Details (Visible only when Card Payment is selected) -->
+            <div id="card-details" style="display: none;">
+                <label for="card-number">Card Number</label>
+                <input type="text" id="card-number" placeholder="Enter your card number"><br>
+                
+                <label for="expiry-date">Expiry Date</label>
+                <input type="month" id="expiry-date" placeholder="MM/YY"><br>
+                
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" placeholder="Enter your CVV"><br>
+            </div>
+                
+            <button type="button" id="pay-button">Pay</button>
+        </form>
+    </div>
+
+    <footer class="footer"><!--footer-->
+        <div class="ftcontainer">
+            <div class="ftrow">
+                <div class="ftcol"><!--footer-column-1-->
+                    <h1>Hospital</h1>
+                    <ul class="bulletlist">
+                        <li><a href="./index.html">About Us</a></li>
+                        <li><a href="./index.html">Our Services</a></li>
+                        <li><a href="./index.html">Doctors</a></li>
+                        <li><a href="/index.html">Pharmacy</a></li>
+                        <li><a href="./index.html">Reservation</a></li>
+                    </ul>
+                </div>
+                <div class="ftcol"><!--footer-column-2-->
+                    <h1>Help</h1>
+                    <ul class="bulletlist">
+                        <li><a href="./index.html">About Us</a></li>
+                        <li><a href="">FAQ</a></li>
+                        <li><a href="./index.html">Locations</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Copy Rights</a></li>
+                    </ul>
+                </div>              
+                <div class="ftcol"><!--footer-column-3-->
+                    <h1>About Us</h1>
+                    <ul class="bulletlist">
+                        <li><a href="">Contact Information and Location</a></li>
+                    </ul>
+                    <h1>Follow Us</h1><!--media icons-->
+                    <ul class="bulletlist-logo">
+                        <li><a href="https://www.facebook.com/"><img src="./images/icons8-facebook-48.png" alt="Facebook"></i></a></li>
+                        <li><a href="https://www.instagram.com/"><img src="./images/icons8-instagram-48.png" alt="Instagram"></i></a></li>
+                        <li><a href="https://twitter.com/?lang=en"><img src="./images/icons8-twitter-48.png" alt="Twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer><!--footer ends-->
+</body>
+</html>
